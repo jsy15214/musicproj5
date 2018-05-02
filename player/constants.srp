@@ -1,0 +1,106 @@
+# File : constants.srp
+# Author : Yanning Mao (yanningm)
+# Date : April 28, 2018
+# Course : CMU 15-323 S18
+#
+# Description:
+# This file contains the set of constants to be used by the entire program.
+
+
+require "debug"
+require "sched"
+require "wxserpent"
+require "midi-io"
+require "prefs"
+require "mididevice"
+require "slider"
+require "prob"
+
+
+# This is the O2 application name. Only O2 processes with the same
+# application name and same local area network can communicate, so
+# we make the application name easy to change.
+APPLICATION = "p5"
+
+# service name for the server
+SERVER_SERVICE = "p5"
+CLIENT_SERVICE = "osc"
+
+# default port number that O2 listens on
+osc_port = 8001
+
+
+# ----------------   Painting Parameters   --------------- #
+
+
+# margin between objects on the frame
+margin_left = 5
+margin_top = 5
+# height of all the buttons
+button_height = 25
+# width of all the sliders
+slider_width = 200
+# height of all the sliders
+slider_height = 20
+
+# width and height of the frame
+window_width = 640
+window_height = 600
+
+# margin between canvas and the frame
+canvas_margin = 3
+
+# width and height of the canvas
+canvas_width = window_width - 2 * canvas_margin
+canvas_height = int(window_height / 2)
+
+
+# ------------------   RGB Parameters   ------------------ #
+
+
+# maximum RGB value
+max_rgb = 255
+
+
+# ----------------   Velocity Parameters   ---------------- #
+
+
+# minimum velocity
+min_vel = 1
+# maximum velocity
+max_vel = 120
+# initial velocity
+INIT_VEL = 100
+
+
+# -----------------   Pitch Parameters   ----------------- #
+
+
+min_pitch = 0           # minimum pitch value in MIDI
+max_pitch = 127         # maximum pitch value in MIDI
+octave_pitches = 12     # number of pitches in an octave
+
+
+# -----------------   Period Parameters   ----------------- #
+
+
+# minimum period
+min_period = 0.1
+# maximum period
+max_period = 5
+# initial period
+init_period = 0.2
+
+
+# ------------   Sound Track Parameters   ----------- #
+
+
+# sound tracks counts
+num_tracks = 4
+
+# number of notes played each cycle
+notes_per_cycle = 16
+
+
+
+
